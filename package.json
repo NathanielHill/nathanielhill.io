@@ -1,0 +1,27 @@
+{
+  "name": "nathanielhill.io",
+  "version": "1.0.0",
+  "description": "nathanielhill.io website",
+  "author": "Nathaniel Hill <nata@goguna.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "next",
+    "deploy": "next build && next export && cp static/rootAssets/* out/ && now out/ -n nathanielhill.io && now alias"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "**/node_modules/**"
+    ]
+  },
+  "dependencies": {
+    "next": "^6.1.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "standard": "^11.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "svgo": "^1.0.5"
+  }
+}
