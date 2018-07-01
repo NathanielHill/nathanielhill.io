@@ -6,9 +6,7 @@ import Head from 'next/head'
 export default () => (
   <div>
     <Matrix />
-    <a href='#'>
-      <Avatar />
-    </a>
+    <Avatar />
     <noscript>
       Turn on JavaScript please.
     </noscript>
@@ -24,12 +22,6 @@ export default () => (
       </title>
     </Head>
     <style jsx>{`
-      a {
-        display: inherit;
-        text-decoration: inherit;
-        color: inherit;
-        cursor: auto;
-      }
       div {
         display: flex;
         justify-content: center;
