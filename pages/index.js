@@ -47,10 +47,10 @@ export default () => (
       html, body {
         width: 100vw;
         height: 100vh;
+        overscroll-behavior: contain;
       }
       body {
         background-color: rgb(0, 22, 42);
-        overscroll-behavior: contain
       }
       canvas {
         z-index: 1
