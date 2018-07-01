@@ -11,6 +11,7 @@ export default () => (
     <Head>
       <meta charSet='utf-8' />
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      <meta name="Description" content="nathanielhill.io website" />
       <title>
         Nathaniel Hill
       </title>
@@ -30,6 +31,12 @@ export default () => (
       html, body {
         width: 100vw;
         height: 100vh;
+      }
+      body {
+        background-color: rgb(0, 22, 42);
+      }
+      canvas {
+        z-index: 1
       }
     `}</style>
   </div>
