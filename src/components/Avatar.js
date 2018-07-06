@@ -4,7 +4,7 @@ export default () => (
   <React.Fragment>
     <style jsx>{`
       svg {
-        margin: 10vh auto;
+        margin: 12vh auto 4vh auto;
         height: 40vh;
         width: auto;
       }

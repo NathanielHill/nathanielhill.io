@@ -5,15 +5,21 @@ export default class extends React.Component {
     super(props)
     this.initCanvas = this.initCanvas.bind(this)
     this.animationUpdate = this.animationUpdate.bind(this)
+    this.startTimer = this.startTimer.bind(this)
+    this.resetTimer = this.resetTimer.bind(this)
     this.ctx = null
     this.canvas = null
     this.columns = 0
     this.MatrixArray = []
     this.counter = 0
+    this.activityCounter = 0
+    this.timeoutId = null
+    this.inactive = false
+    this.timeoutLength = 5000
   }
 
   static defaultProps = {
-    fontSize: 20,
+    fontSize: 16,
     fontFamily: 'arial',
     // textContent: '10\u{20BF}',
     textContent: '01',
@@ -25,9 +31,34 @@ export default class extends React.Component {
   componentDidMount() {
     this.initCanvas()
     this.animationUpdate()
+    document.addEventListener('mousemove', this.resetTimer, false)
+    document.addEventListener('mousedown', this.resetTimer, false)
+    document.addEventListener('keypress', this.resetTimer, false)
+    document.addEventListener('touchmove', this.resetTimer, false)
+    this.startTimer()
   }
 
-  initCanvas () {
+  startTimer() {
+    const setInactive = () => {
+      this.inactive = true
+      this.timeoutLength *= 1.25
+      document.getElementById('matrix').classList.remove('canvas-hidden')
+    }
+    if (typeof window !== 'undefined') {
+      this.timeoutId = window.setTimeout(setInactive, this.timeoutLength)
+    }
+  }
+
+  resetTimer() {
+    if (typeof window !== 'undefined') {
+      window.clearTimeout(this.timeoutId)
+      this.inactive = false
+      document.getElementById('matrix').classList.add('canvas-hidden')
+      this.startTimer()
+    }
+  }
+
+  initCanvas() {
     if (typeof document !== 'undefined') {
       this.canvas = document.getElementById('matrix')
       this.canvas.width = document.body.clientWidth
@@ -40,9 +71,9 @@ export default class extends React.Component {
       }
     }
   }
-  animationUpdate () {
+  animationUpdate() {
     this.counter++
-    if (this.counter === this.props.speed) {
+    if ((this.counter % this.props.speed === 0) && this.inactive) {
       this.counter = 0
       this.ctx.fillStyle = this.props.backgroundColor
       this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height)
@@ -76,7 +107,12 @@ export default class extends React.Component {
             left: 0;
             right: 0;
             display: block;
-            background-color: rgba(0, 22, 42, 0.1);
+            opacity: 1;
+            transition: opacity 1s;
+          }
+          .canvas-hidden {
+            opacity: 0;
+            transition: opacity 1s;
           }
         `}</style>
       </canvas>

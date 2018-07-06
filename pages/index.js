@@ -1,12 +1,14 @@
-import React from 'react'
-import Avatar from './../src/components/Avatar'
-import Matrix from './../src/components/Matrix'
+import { Avatar, BlogBar, Matrix, ResumeBar, SocialBar } from './../src/components'
 import Head from 'next/head'
+import React from 'react'
 
 export default () => (
   <div>
     <Matrix />
     <Avatar />
+    <BlogBar />
+    <ResumeBar />
+    <SocialBar />
     <noscript>
       Turn on JavaScript please.
     </noscript>
@@ -25,6 +27,7 @@ export default () => (
       div {
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
       }
       noscript {
@@ -40,12 +43,12 @@ export default () => (
         width: 100vw;
         height: 100vh;
         overscroll-behavior: contain;
+        font-size: 2vmin;
+        font-family: Verdana, Geneva, sans-serif;
       }
       body {
-        background-color: rgb(0, 22, 42);
-      }
-      canvas {
-        z-index: 1
+        background-color: rgb(108, 143, 177);
+        background-image: linear-gradient(-25deg, rgb(15, 46, 75), rgb(108, 143, 177));
       }
     `}</style>
   </div>
