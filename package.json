@@ -5,27 +5,15 @@
   "author": "Nathaniel Hill <nata@goguna.com>",
   "license": "MIT",
   "scripts": {
-    "deploy": "next build && next export && cp -R static/rootAssets/* out/ && now out/ -n nathanielhill.io && now alias",
-    "dev": "cross-env NODE_ENV=development next",
-    "static": "next build && next export && cp -R static/rootAssets/* out/ && serve"
-  },
-  "standard": {
-    "parser": "babel-eslint",
-    "ignore": [
-      "**/node_modules/**"
-    ]
+    "build": "next build",
+    "export": "next export",
+    "test": "echo \"no tests specified\""
   },
   "dependencies": {
-    "next": "^6.1.1",
+    "next": "^7.0.0",
     "next-compose-plugins": "^2.1.1",
-    "next-offline": "^2.7.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "standard": "^11.0.1"
-  },
-  "devDependencies": {
-    "babel-eslint": "^8.2.5",
-    "serve": "^9.2.0",
-    "svgo": "^1.0.5"
+    "next-offline": "^3.0.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   }
 }

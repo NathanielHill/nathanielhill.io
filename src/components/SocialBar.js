@@ -1,4 +1,4 @@
-import { AngelList, Bitcoin, GitHub, LinkedIn, PluralSight, StackOverflow } from './icons'
+import { AngelList, Bitcoin, GitHub, LinkedIn, PluralSight, StackOverflow } from 'components/icons'
 import React from 'react'
 
 export default () => (

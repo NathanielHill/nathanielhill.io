@@ -1,4 +1,4 @@
-import { Avatar, BlogBar, Matrix, ResumeBar, SocialBar } from './../src/components'
+import { Avatar, BlogBar, Matrix, ResumeBar, SocialBar } from 'components'
 import Head from 'next/head'
 import React from 'react'
 
