@@ -1,0 +1,12 @@
+*
+!*/
+!public
+
+!www
+www/*
+!www/components
+!www/pages
+!www/static
+!www/next.config.js
+!www/package.json
+!www/yarn.lock

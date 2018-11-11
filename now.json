@@ -1,5 +1,15 @@
 {
-  "name": "nathanielhill.io",
+  "name": "nathanielhill",
   "alias": "www.nathanielhill.io",
-  "type": "static"
+  "version": 2,
+  "builds": [
+    { "src": "public/*", "use": "@now/static" },
+    { "src": "www/package.json", "use": "@now/static-build" }
+  ],
+  "routes": [
+    { "src": "^/browserconfig.xml", "dest": "/public/browserconfig.xml" },
+    { "src": "^/favicon.ico", "dest": "/public/favicon.ico" },
+    { "src": "^/robots.txt", "dest": "/public/robots.txt" },
+    { "src": "^/(.*)", "dest": "/www/$1" }
+  ]
 }

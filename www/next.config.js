@@ -15,11 +15,9 @@ module.exports = withPlugins(
   ],
   {
     webpack: config => {
-      config.resolve.modules = [
-        path.resolve('./src'),
-        path.resolve('./public'),
-        'node_modules'
-      ]
+      config.resolve.alias = {
+        components: path.resolve(__dirname, 'components')
+      }
       return config
     },
     pageExtensions: ['js', 'mdx']
