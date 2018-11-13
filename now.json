@@ -7,10 +7,10 @@
     { "src": "www/package.json", "use": "@now/static-build" }
   ],
   "routes": [
-    { "src": "^/browserconfig.xml", "dest": "/public/browserconfig.xml" },
-    { "src": "^/favicon.ico", "dest": "/public/favicon.ico" },
-    { "src": "^/manifest.json", "dest": "/public/manifest.json" },
-    { "src": "^/robots.txt", "dest": "/public/robots.txt" },
+    { "src": "^/browserconfig.xml$", "dest": "/public/browserconfig.xml" },
+    { "src": "^/favicon.ico$", "dest": "/public/favicon.ico" },
+    { "src": "^/manifest.json$", "dest": "/public/manifest.json" },
+    { "src": "^/robots.txt$", "dest": "/public/robots.txt" },
     { "src": "^/(.*)icon(.*)\\.png", "dest": "/public/icons/$1icon$2.png"},
     { "src": "^/(.*)", "dest": "/www/$1" }
   ]
