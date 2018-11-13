@@ -9,6 +9,7 @@
   "routes": [
     { "src": "^/browserconfig.xml", "dest": "/public/browserconfig.xml" },
     { "src": "^/favicon.ico", "dest": "/public/favicon.ico" },
+    { "src": "^/manifest.json", "dest": "/public/manifest.json" },
     { "src": "^/robots.txt", "dest": "/public/robots.txt" },
     { "src": "^/(.*)", "dest": "/www/$1" }
   ]
