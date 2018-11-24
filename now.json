@@ -2,6 +2,7 @@
   "name": "nathanielhill",
   "alias": "www.nathanielhill.io",
   "version": 2,
+  "regions": [ "all" ],
   "builds": [
     { "src": "public/**", "use": "@now/static" },
     { "src": "www/package.json", "use": "@now/static-build" }
