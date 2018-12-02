@@ -1,4 +1,3 @@
-const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 const emoji = require('remark-emoji')
 const nextOffline = require('next-offline')
 const path = require('path')
@@ -10,7 +9,7 @@ const withPlugins = require('next-compose-plugins')
 
 module.exports = withPlugins(
   [
-    [nextOffline, ['!', PHASE_DEVELOPMENT_SERVER]],
+    [nextOffline],
     [withMDX]
   ],
   {
