@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default () => (
-  <a href='/static/Nathaniel_Hill_Resume.pdf' alt='Download My Resume!'>
+  <a href="/Nathaniel_Hill_Resume.pdf" alt="Download My Resume!">
     <style jsx>{`
       a {
         color: inherit;
