@@ -6,7 +6,8 @@
   "license": "UNLICENSED",
   "keywords": [],
   "scripts": {
-    "now-build": "next build && next export -o dist"
+    "start": "next",
+    "build": "next build"
   },
   "babel": {
     "presets": [
