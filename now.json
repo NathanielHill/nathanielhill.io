@@ -1,6 +1,7 @@
 {
   "name": "nathanielhill",
   "alias": "nathanielhill.io",
+  "scope": "nata",
   "version": 2,
   "regions": [ "all" ],
   "builds": [
