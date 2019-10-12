@@ -17,18 +17,18 @@
     ]
   },
   "dependencies": {
-    "@mdx-js/mdx": "^0.16.5",
+    "@mdx-js/mdx": "^1.5.1",
     "@zeit/next-mdx": "^1.2.0",
-    "next": "^7.0.2",
-    "next-compose-plugins": "^2.1.1",
-    "next-offline": "^3.2.2",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-twemoji": "^0.1.0",
+    "next": "^9.1.1",
+    "next-compose-plugins": "^2.2.0",
+    "next-offline": "^4.0.6",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-twemoji": "^0.2.3",
     "remark-emoji": "^2.0.2"
   },
   "devDependencies": {
     "babel-plugin-preval": "^3.0.1",
-    "standard": "^12.0.1"
+    "standard": "^14.3.1"
   }
 }
