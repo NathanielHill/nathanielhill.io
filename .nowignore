@@ -2,8 +2,17 @@
 !*/
 
 !components
+components/*
+!components/**
+
 !pages
+pages/*
+!pages/**
+
 !public
+public/*
+!public/**
+
 !next.config.js
 !package.json
 !yarn.lock
