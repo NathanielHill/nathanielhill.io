@@ -30,6 +30,5 @@ module.exports = withOffline({
       components: path.resolve(__dirname, 'components'),
     };
     return config;
-  },
-  pageExtensions: ['js', 'mdx'],
+  }
 });
