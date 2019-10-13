@@ -47,12 +47,18 @@ export default () => (
         width: 100vw;
         height: 100vh;
         overscroll-behavior: contain;
+        font-size: 16px;
         font-size: 2vmin;
         font-family: Verdana, Geneva, sans-serif;
       }
       body {
         background-color: rgb(108, 143, 177);
         background-image: linear-gradient(-25deg, rgb(15, 46, 75), rgb(108, 143, 177));
+      }
+      @media (max-width: 600px) {
+        body {
+          font-size: 3vmin;
+        }
       }
     `}</style>
   </div>

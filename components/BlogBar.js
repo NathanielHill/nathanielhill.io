@@ -31,6 +31,11 @@ export default () => (
       div:hover {
         box-shadow: 0.1em 0.2em 0.2em 0.1em rgba(0, 0, 0, 0.3);
       }
+      @media (max-width: 600px) {
+        div {
+          width: 20rem;
+        }
+      }
     `}</style>
   </div>
 );
