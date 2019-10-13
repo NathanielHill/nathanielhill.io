@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 export default () => (
-  <a href='https://stackoverflow.com/story/nathanielhill' alt='StackOverflow' target='_blank'>
+  <a href='https://stackoverflow.com/story/nathanielhill' alt='StackOverflow' target='_blank' rel='noopener noreferrer'>
     <style jsx>{`
       a {
         margin: 0 0.5em;
@@ -12,7 +12,7 @@ export default () => (
       }
       path {
         fill: black;
-        opacity: 0.80;
+        opacity: 0.8;
       }
     `}</style>
     <svg viewBox='0 0 88.969 113.428' width='100%' height='100%' preserveAspectRatio='xMidYMid'>
@@ -26,4 +26,4 @@ export default () => (
       <path fill='#797b7b' d='M17.84 86.651h44.988v8.937H17.84V86.65z' />
     </svg>
   </a>
-)
+);

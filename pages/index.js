@@ -1,6 +1,6 @@
-import { Avatar, BlogBar, Matrix, ResumeBar, SocialBar } from 'components'
-import Head from 'next/head'
-import React from 'react'
+import { Avatar, BlogBar, Matrix, ResumeBar, SocialBar } from 'components';
+import Head from 'next/head';
+import React from 'react';
 
 export default () => (
   <div>
@@ -9,19 +9,15 @@ export default () => (
     <BlogBar />
     <ResumeBar />
     <SocialBar />
-    <noscript>
-      Turn on JavaScript please.
-    </noscript>
+    <noscript>Turn on JavaScript please.</noscript>
 
     <Head>
       <meta charSet='utf-8' />
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-      <meta name="Description" content="nathanielhill.io website" />
-      <meta name="theme-color" content="#00162A" />
-      <link rel="manifest" href="/manifest.json" />
-      <title>
-        Nathaniel Hill
-      </title>
+      <meta name='Description' content='nathanielhill.io website' />
+      <meta name='theme-color' content='#00162A' />
+      <link rel='manifest' href='/manifest.json' />
+      <title>Nathaniel Hill</title>
     </Head>
     <style jsx>{`
       div {
@@ -39,7 +35,8 @@ export default () => (
         margin: 0;
         padding: 0;
       }
-      html, body {
+      html,
+      body {
         width: 100vw;
         height: 100vh;
         overscroll-behavior: contain;
@@ -52,4 +49,4 @@ export default () => (
       }
     `}</style>
   </div>
-)
+);

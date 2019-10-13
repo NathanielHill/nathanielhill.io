@@ -1,22 +1,23 @@
-import Document, { Head, Main, NextScript } from 'next/document'
-import flush from 'styled-jsx/server'
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import React from 'react';
+
+// This custom <Document /> is only to set lang="en" on the <html> tag!
 
 export default class MyDocument extends Document {
-  static async getInitialProps({ renderPage }) {
-    const { html, head, errorHtml, chunks } = renderPage()
-    const styles = flush()
-    return { html, head, errorHtml, chunks, styles }
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
   }
 
   render() {
     return (
-      <html lang='en'>
+      <Html lang='en'>
         <Head />
         <body>
           <Main />
           <NextScript />
         </body>
-      </html>
-    )
+      </Html>
+    );
   }
 }

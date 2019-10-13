@@ -1,5 +1,5 @@
-import { AngelList, Bitcoin, GitHub, LinkedIn, PluralSight, StackOverflow } from 'components/icons'
-import React from 'react'
+import { AngelList, Bitcoin, GitHub, LinkedIn, PluralSight, StackOverflow } from 'components/icons';
+import React from 'react';
 
 export default () => (
   <div className='social-container'>
@@ -25,16 +25,16 @@ export default () => (
         line-height: 0em;
         text-decoration: none;
         outline: 0;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       }
       .social-container > a > svg {
         height: 6vh;
         width: 6vh;
-        transition: filter .3s;
+        transition: filter 0.3s;
       }
       .social-container > a > svg:hover {
-        filter: drop-shadow(.3em .3em .3em rgba(0, 0, 0, 0.3));
+        filter: drop-shadow(0.3em 0.3em 0.3em rgba(0, 0, 0, 0.3));
       }
     `}</style>
   </div>
-)
+);
