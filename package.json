@@ -9,27 +9,36 @@
     "start": "next",
     "build": "next build"
   },
-  "babel": {
-    "presets": [
-      "next/babel"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,json,css,scss}": [
+      "prettier --write"
     ],
-    "plugins": [
-      "preval"
+    "**/*.js": [
+      "healthier"
     ]
   },
+  "prettier": {
+    "jsxSingleQuote": true,
+    "printWidth": 120,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
   "dependencies": {
-    "@mdx-js/mdx": "^1.5.1",
-    "@zeit/next-mdx": "^1.2.0",
     "next": "^9.1.1",
-    "next-compose-plugins": "^2.2.0",
     "next-offline": "^4.0.6",
     "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-twemoji": "^0.2.3",
-    "remark-emoji": "^2.0.2"
+    "react-dom": "^16.10.2"
   },
   "devDependencies": {
-    "babel-plugin-preval": "^3.0.1",
-    "standard": "^14.3.1"
+    "healthier": "^3.2.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2"
   }
 }

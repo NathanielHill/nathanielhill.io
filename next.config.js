@@ -1,19 +1,13 @@
-const emoji = require("remark-emoji");
-const nextOffline = require("next-offline");
-const path = require("path");
-const withMDX = require("@zeit/next-mdx")({
-  extension: /\.mdx?$/,
-  options: { mdPlugins: [emoji] }
-});
-const withPlugins = require("next-compose-plugins");
+const path = require('path');
+const withOffline = require('next-offline');
 
-module.exports = withPlugins([[nextOffline], [withMDX]], {
+module.exports = withOffline({
   webpack: config => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      components: path.resolve(__dirname, "components")
+      components: path.resolve(__dirname, 'components'),
     };
     return config;
   },
-  pageExtensions: ["js", "mdx"]
+  pageExtensions: ['js', 'mdx'],
 });
