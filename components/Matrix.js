@@ -25,6 +25,7 @@ class Matrix extends React.Component {
     document.addEventListener('mousedown', this.resetTimer, false);
     document.addEventListener('keypress', this.resetTimer, false);
     document.addEventListener('touchmove', this.resetTimer, false);
+    document.addEventListener('onresize', this.initCanvas, false);
     this.startTimer();
   }
 

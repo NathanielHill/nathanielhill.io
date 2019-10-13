@@ -4,20 +4,6 @@ import React from 'react';
 
 export default () => (
   <div>
-    <Matrix />
-    <header>
-      <Avatar />
-    </header>
-    <main>
-      <BlogBar />
-      <ResumeBar />
-    </main>
-    <footer>
-      <SocialBar />
-    </footer>
-
-    <noscript>Turn on JavaScript please.</noscript>
-
     <Head>
       <meta charSet='utf-8' />
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -29,10 +15,21 @@ export default () => (
       <meta name='msapplication-square70x70logo' content='/icons/ms-icon-70x70.png' />
       <link rel='apple-touch-icon' href='/icons/apple-icon.png' />
       <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
-
       <link rel='manifest' href='/manifest.json' />
       <title>Nathaniel Hill</title>
     </Head>
+    <Matrix />
+    <header>
+      <Avatar />
+    </header>
+    <main>
+      <BlogBar />
+      <ResumeBar />
+    </main>
+    <footer>
+      <SocialBar />
+    </footer>
+    <noscript>Turn on JavaScript please.</noscript>
     <style jsx>{`
       div {
         display: flex;
@@ -49,6 +46,14 @@ export default () => (
         margin: 0;
         padding: 0;
       }
+      html {
+        box-sizing: border-box;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
       html,
       body {
         width: 100vw;
@@ -62,9 +67,17 @@ export default () => (
         background-color: rgb(108, 143, 177);
         background-image: linear-gradient(-25deg, rgb(15, 46, 75), rgb(108, 143, 177));
       }
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
       @media (min-width: 600px) {
         html,
         body {
+          width: 100vw;
+          height: 100vh;
           font-size: 2vmin;
         }
       }

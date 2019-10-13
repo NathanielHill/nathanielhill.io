@@ -14,7 +14,7 @@ export default () => (
         background-image: linear-gradient(-25deg, rgb(187, 151, 190), rgb(218, 188, 221));
         border-radius: 10vh;
         padding: 2vh;
-        margin: 0 30vh;
+        margin: 0;
         display: flex;
         width: 20rem;
         justify-content: space-around;
