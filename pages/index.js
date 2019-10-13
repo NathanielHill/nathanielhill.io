@@ -5,10 +5,17 @@ import React from 'react';
 export default () => (
   <div>
     <Matrix />
-    <Avatar />
-    <BlogBar />
-    <ResumeBar />
-    <SocialBar />
+    <header>
+      <Avatar />
+    </header>
+    <main>
+      <BlogBar />
+      <ResumeBar />
+    </main>
+    <footer>
+      <SocialBar />
+    </footer>
+
     <noscript>Turn on JavaScript please.</noscript>
 
     <Head>
