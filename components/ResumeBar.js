@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () => (
-  <a href='/Nathaniel_Hill_Resume.pdf' alt='Download My Resume!'>
+  <a href='/Nathaniel_Hill_Resume.pdf' alt='Download My Resume!' aria-label='Download My Resume!'>
     <style jsx>{`
       a {
         color: inherit;
