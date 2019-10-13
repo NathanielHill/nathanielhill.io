@@ -16,6 +16,13 @@ export default () => (
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       <meta name='Description' content='nathanielhill.io website' />
       <meta name='theme-color' content='#00162A' />
+      <link rel='icon' sizes='192x192' href='/icons/icon-192x192.png' />
+      <meta name='msapplication-square310x310logo' content='/icons/ms-icon-310x310.png' />
+      <meta name='msapplication-square150x150logo' content='/icons/ms-icon-150x150.png' />
+      <meta name='msapplication-square70x70logo' content='/icons/ms-icon-70x70.png' />
+      <link rel='apple-touch-icon' href='/icons/apple-icon.png' />
+      <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+
       <link rel='manifest' href='/manifest.json' />
       <title>Nathaniel Hill</title>
     </Head>
