@@ -14,7 +14,7 @@ export default () => (
         background-color: #629288;
         border-radius: 10vh;
         padding: 2vh 3vh;
-        margin: 2vh 3vh;
+        margin: 2vh 0;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -28,12 +28,18 @@ export default () => (
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       }
       .social-container > a > svg {
-        height: 6vh;
-        width: 6vh;
+        height: 4vh;
+        width: 4vh;
         transition: filter 0.3s;
       }
       .social-container > a > svg:hover {
         filter: drop-shadow(0.3em 0.3em 0.3em rgba(0, 0, 0, 0.3));
+      }
+      @media (min-width: 600px) {
+        .social-container > a > svg {
+          height: 6vh;
+          width: 6vh;
+        }
       }
     `}</style>
   </div>
