@@ -28,15 +28,20 @@
     "trailingComma": "es5"
   },
   "dependencies": {
+    "cross-fetch": "^3.0.4",
     "next": "9.2.2",
     "next-offline": "4.0.6",
     "react": "16.12.0",
-    "react-dom": "16.12.0"
+    "react-dom": "16.12.0",
+    "tiny-skeleton-loader-react": "^1.1.3"
   },
   "devDependencies": {
+    "@types/node": "^13.7.4",
+    "@types/react": "^16.9.21",
     "healthier": "3.2.0",
     "husky": "4.2.3",
     "lint-staged": "10.0.7",
-    "prettier": "1.19.1"
+    "prettier": "1.19.1",
+    "typescript": "^3.8.2"
   }
 }
