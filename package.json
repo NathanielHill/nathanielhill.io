@@ -7,7 +7,9 @@
   "keywords": [],
   "scripts": {
     "start": "next",
-    "build": "next build"
+    "build": "next build",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -28,15 +30,17 @@
     "trailingComma": "es5"
   },
   "dependencies": {
-    "next": "9.3.0",
-    "next-offline": "5.0.0",
+    "next": "9.4.2",
+    "next-offline": "5.0.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "snyk": "1.324.0"
   },
   "devDependencies": {
-    "healthier": "3.2.0",
-    "husky": "4.2.4",
-    "lint-staged": "10.0.9",
-    "prettier": "2.0.0"
-  }
+    "healthier": "3.3.0",
+    "husky": "4.2.5",
+    "lint-staged": "10.2.6",
+    "prettier": "2.0.5"
+  },
+  "snyk": true
 }
