@@ -26,7 +26,7 @@ export default () => (
         justify-content: space-around;
         box-shadow: 0 0 0 0;
         transition: box-shadow 0.3s;
-        font-size: 1.8em;
+        font-size: 1.6em;
         line-height: 0.8em;
         font-weight: bold;
       }
