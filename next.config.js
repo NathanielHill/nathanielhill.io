@@ -2,8 +2,17 @@ const path = require('path');
 const withOffline = require('next-offline');
 
 module.exports = withOffline({
-  target: 'serverless',
-  transformManifest: manifest => ['/'].concat(manifest), // add the homepage to the cache
+  async redirects() {
+    return [
+      {
+        source: '/schedule',
+        destination:
+          'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0SnR5b7nSt3hGMfSsGUuH41ZTloN4FktMmqdLHCNeoMwobd3NpqnTSONVBrxZ-BUtfcpwRrVJV',
+        permanent: true,
+      },
+    ];
+  },
+  transformManifest: (manifest) => ['/'].concat(manifest), // add the homepage to the cache
   workboxOpts: {
     swDest: 'static/service-worker.js',
     runtimeCaching: [
@@ -24,7 +33,7 @@ module.exports = withOffline({
       },
     ],
   },
-  webpack: config => {
+  webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
       components: path.resolve(__dirname, 'src/components'),
